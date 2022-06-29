@@ -1,6 +1,35 @@
+:root {
+  /* spacing */
+  --spacing-1: 8px;
+  --spacing-2: 16px;
+  --spacing-3: 24px;
+  --spacing-4: 32px;
+  --spacing-5: 48px;
+  --spacing-6: 64px;
+  --spacing-7: 96px;
+  --spacing-8: 128px;
+
+  /* font-size */
+  --font-size-1: 1rem;
+  --font-size-2: 1.25rem;
+  --font-size-3: 1.5rem;
+  --font-size-4: 2rem;
+
+  /* color palette */
+  --color-primary: hsl(160deg, 100%, 30%);
+  --color-secondary-light: hsl(45deg, 100%, 50%);
+  --color-secondary-dark: hsl(45deg, 100%, 40%);
+  --color-black: hsl(0deg, 0%, 0%);
+  --color-white: hsl(0deg, 0%, 100%);
+  --color-gray-light: hsl(0deg, 0%, 60%);
+  --color-gray-medium: hsl(0deg, 0%, 40%);
+  --color-gray-dark: hsl(0deg, 0%, 30%);
+  --color-gray-very-dark: hsl(0deg, 0%, 10%);
+}
+
 * {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 html,
@@ -9,4 +38,68 @@ body {
   padding: 0;
 }
 
-/* Add styles here! */
+h1,
+h2 {
+  margin: 0;
+}
+
+header {
+  border-bottom: var(--spacing-1) solid var(--color-gray-medium);
+}
+
+.max-width-wrapper {
+  max-width: calc(750px + 2 * var(--spacing-3));
+  margin: 0 auto;
+  padding: 0 var(--spacing-3);
+}
+
+.intro-chunk {
+  padding-top: var(--spacing-7);
+  padding-bottom: var(--spacing-7);
+  max-width: 400px;
+}
+
+.intro-chunk .title {
+  font-size: var(--font-size-4);
+  margin-bottom: var(--spacing-4);
+}
+
+.intro-chunk p {
+  font-size: var(--font-size-2);
+  color: var(--color-gray-very-dark);
+  line-height: 1.4;
+}
+
+.intro-chunk strong {
+  color: var(--color-primary);
+}
+
+main {
+  background-color: var(--color-gray-light);
+  padding: var(--spacing-7) 0;
+}
+
+.card {
+  background-color: var(--color-white);
+  padding: var(--spacing-3);
+  margin: calc(-1 * var(--spacing-3));
+  border-bottom: var(--spacing-1) solid var(--color-gray-medium);
+}
+
+.card p {
+  font-size: var(--font-size-2);
+  line-height: 1.4;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.indented-heading {
+  width: fit-content;
+  padding: var(--spacing-2) var(--spacing-4);
+  margin-left: calc(-1 * var(--spacing-4));
+  margin-top: calc(-1 * var(--spacing-2));
+  background-color: var(--color-secondary-light);
+  border-bottom: var(--spacing-1) solid var(--color-secondary-dark);
+}
